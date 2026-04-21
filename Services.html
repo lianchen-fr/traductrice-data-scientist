@@ -1,12 +1,13 @@
 <!DOCTYPE HTML>
 <html lang="fr">
 <head>
-    <title>Services – CHEN Lian</title>
+    <title>CHEN Lian – Traductrice</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
+        /* 固定语言切换按钮：脱离 header，避免被模板覆盖 */
         .language-floating {
             position: fixed;
             top: 20px;
@@ -72,10 +73,11 @@
     <div id="header-wrapper">
         <div class="container">
             <header id="header">
+
                 <h1>
                     <a href="index.html" id="logo">
-                        <span class="lang-fr-inline">CHEN Lian – Traductrice</span>
-                        <span class="lang-zh-inline">CHEN Lian – 翻译服务</span>
+                        <span class="lang-fr-inline">CHEN Lian</span>
+                        <span class="lang-zh-inline">CHEN Lian 陈恋</span>
                     </a>
                 </h1>
 
@@ -84,12 +86,37 @@
                         <span class="lang-fr-inline">Accueil</span>
                         <span class="lang-zh-inline">首页</span>
                     </a>
-                    <a href="ervices.html" class="current-page-item">
+                    <a href="Services.html">
                         <span class="lang-fr-inline">Services et prix</span>
                         <span class="lang-zh-inline">服务与价格</span>
                     </a>
                 </nav>
+
             </header>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <div id="banner-wrapper">
+        <div class="container">
+            <div id="banner">
+                <h1>
+                    <span class="lang-inline lang-fr active">CHEN Lian</span>
+                    <span class="lang-inline lang-zh">陈恋</span>
+                </h1>
+
+                <span class="lang lang-fr active">
+                    Traduction assermentée &amp; Data scientist
+                    <br /><br />
+                    français–chinois–cantonais–anglais
+                </span>
+
+                <span class="lang lang-zh">
+                    法院认证翻译 &amp; 数据科学工作者
+                    <br /><br />
+                    法语–中文–粤语–英语
+                </span>
+            </div>
         </div>
     </div>
 
@@ -100,222 +127,126 @@
 
                 <!-- LEFT COLUMN -->
                 <div class="col-8 col-12-medium">
-                    <section>
+                    <section id="services">
 
-                        <h2>
-                            <span class="lang-fr-inline">Tarifs indicatifs</span>
-                            <span class="lang-zh-inline">参考价格</span>
-                        </h2>
+                        <section id="about">
+                            <h2>
+                                <span class="lang-fr-inline">Profil</span>
+                                <span class="lang-zh-inline">个人简介</span>
+                            </h2>
 
-                        <div class="lang-fr-block tarif-intro">
-                            <p>
-                                Les tarifs varient en fonction du type de document, du volume, du niveau de technicité,
-                                du délai demandé (3 à 5 jours, 7 à 9 jours ou urgence 24 h),
-                                ainsi que de la nature de la prestation (traduction écrite, interprétation, etc.).
-                            </p>
-                        </div>
-
-                        <div class="lang-zh-block tarif-intro">
-                            <p>
-                                价格会根据文件类型、篇幅、
-                                所需时限（3至5天、7至9天或24小时加急），
-                                以及服务性质（笔译、口译等）而有所不同。
-                            </p>
-                        </div>
-
-                        <div class="tarif-note">
                             <div class="lang-fr-block">
                                 <p>
-                                    <strong>Délais :</strong><br />
-
-                                    • Documents courts (permis de conduire, acte de naissance, diplômes, etc.) : 3 à 5 jours<br />
-
-                                    • Documents plus complexes ou volumineux :<br />
-                                    &nbsp;&nbsp;– Moins de 10 pages (contrats, jugements, dossiers administratifs, etc.) : 7 à 9 jours<br />
-                                    &nbsp;&nbsp;– Plus de 10 pages : délai variable en fonction du volume<br />
-
-                                    • Urgence : 24 h (tarif majoré)<br />
-
-                                    <em>Les délais commencent à courir à compter de la réception du règlement.</em>
+                                    Docteure en sciences du langage et spécialiste du traitement automatique des langues,
+                                    je propose des services de traduction et d’ingénierie linguistique
+                                    entre le français, le chinois et le cantonais.
+                                </p>
+                                <p>
+                                    Mes compétences couvrent la traduction générale, la traduction assermentée
+                                    (français–chinois–cantonais) pour les contrats d'entreprise, documents juridiques, permis de conduire, documents notariés, etc.
+, la création et le traitement de corpus,
+                                    ainsi que la création de sites web.
                                 </p>
                             </div>
 
                             <div class="lang-zh-block">
                                 <p>
-                                    <strong>交付时间：</strong><br />
-
-                                    • 短文件（驾照、出生证明、学历证书等）：3至5天<br />
-
-                                    • 较复杂或篇幅较长的文件：<br />
-                                    &nbsp;&nbsp;– 少于10页（合同、判决书、行政材料等）：7至9天<br />
-                                    &nbsp;&nbsp;– 超过10页：交付时间将根据篇幅另行确定<br />
-
-                                    • 加急服务：24小时（加收费用）<br />
-
-                                    <em>交付时间自收到付款之日起计算。</em>
+                                    我拥有语言学博士学位，专注于自然语言处理领域，
+                                    提供法语、中文、粤语之间的翻译与语言工程服务。
+                                </p>
+                                <p>
+                                    我的专业能力包括：普通翻译、法院认证翻译 （公司合同，司法文件，驾照，公证书等）
+                                    （法语–中文–粤语）、语料库创建与处理，以及网站制作。
                                 </p>
                             </div>
-                        </div>
+                        </section>
 
-                        <br />
+                        <section>
+                            <h2>
+                                <span class="lang-fr-inline">Services de traduction</span>
+                                <span class="lang-zh-inline">翻译服务</span>
+                            </h2>
 
-                        <h2>
-                            <span class="lang-fr-inline">Demande de devis :</span>
-                            <span class="lang-zh-inline">报价咨询：</span>
-                        </h2>
+                            <ul class="link-list lang-fr-block">
+                                <li><strong>Traduction générale en anglais–français–chinois–cantonais</strong></li>
+                                <li>Traductrice assermentée en français–chinois–cantonais (contrats d'entreprise, documents juridiques, permis de conduire, documents notariés, etc.)
+</li>
+                                <li>Interprétation (oral) en anglais–français–chinois–cantonais</li>
+                            </ul>
 
-                        <div class="lang-fr-block">
-                            <p>
-                                Merci d’envoyer votre demande (le document à traduire et les délais souhaités) à :
-                                <a href="mailto:lian.chen@orange.fr" class="email-link">
-                                    lian.chen@orange.fr
-                                </a>
-                            </p>
-                        </div>
+                            <ul class="link-list lang-zh-block">
+                                <li><strong>英语–法语–中文–粤语普通翻译</strong></li>
+                                <li>法语–中文–粤语法院认证翻译（公司合同，司法文件，驾照，公证书等）</li>
+                                <li>英语–法语–中文–粤语口译服务</li>
+                            </ul>
+                        </section>
 
-                        <div class="lang-zh-block">
-                            <p>
-                                请将您的报价申请（需翻译的文件及期望完成时间）发送至：
-                                <a href="mailto:lian.chen@orange.fr" class="email-link">
-                                    lian.chen@orange.fr
-                                </a>
-                            </p>
-                        </div>
+                        <section>
+                            <h2>
+                                <span class="lang-fr-inline">Services linguistiques</span>
+                                <span class="lang-zh-inline">语言技术服务</span>
+                            </h2>
 
-                        <table class="tarif-table">
-                            <tr>
-                                <th>
-                                    <span class="lang-fr-inline">Catégorie</span>
-                                    <span class="lang-zh-inline">类别</span>
-                                </th>
-                                <th>
-                                    <span class="lang-fr-inline">Service</span>
-                                    <span class="lang-zh-inline">服务</span>
-                                </th>
-                                <th>
-                                    <span class="lang-fr-inline">Remarques tarifaires</span>
-                                    <span class="lang-zh-inline">价格说明</span>
-                                </th>
-                            </tr>
+                            <ul class="link-list lang-fr-block">
+                                <li>Création de corpus linguistiques</li>
+                                <li>Analyse et traitement de corpus</li>
+                            </ul>
 
-                            <tr>
-                                <td rowspan="3">
-                                    <strong>
-                                        <span class="lang-fr-inline">Services de traduction</span>
-                                        <span class="lang-zh-inline">翻译服务</span>
-                                    </strong>
-                                </td>
-                                <td>
-                                    <span class="lang-fr-inline">Traduction anglais–français–chinois–cantonais</span>
-                                    <span class="lang-zh-inline">英语–法语–中文–粤语笔译</span>
-                                </td>
-                                <td>
-                                    <span class="lang-fr-inline">
-                                        Tarif variable selon le volume, le type de document
-                                        et le délai (24h / 3 jours à partir de la réception du règlement).
-                                    </span>
-                                    <span class="lang-zh-inline">
-                                        价格根据篇幅、文件类型及完成时限而定
-                                        （收到付款后可提供24小时或3天起的服务）。
-                                    </span>
-                                </td>
-                            </tr>
+                            <ul class="link-list lang-zh-block">
+                                <li>语言语料库创建</li>
+                                <li>语料分析与处理</li>
+                            </ul>
+                        </section>
 
-                            <tr>
-                                <td>
-                                    <span class="lang-fr-inline">
-                                        Traductrice assermentée français–chinois–cantonais
-                                    </span>
-                                    <span class="lang-zh-inline">
-                                        法语–中文–粤语法院认证翻译
-                                    </span>
-                                </td>
-                                <td>
-                                    <span class="lang-fr-inline">
-                                        Tarif variable selon le volume, le type de document
-                                        et le délai (24h / 3 jours à partir de la réception du règlement).
-                                    </span>
-                                    <span class="lang-zh-inline">
-                                        价格根据篇幅、文件类型及完成时限而定
-                                        （收到付款后可提供24小时或3天起的服务）。
-                                    </span>
-                                </td>
-                            </tr>
+                        <section>
+                            <h2>
+                                <span class="lang-fr-inline">Services techniques</span>
+                                <span class="lang-zh-inline">技术服务</span>
+                            </h2>
 
-                            <tr>
-                                <td>
-                                    <span class="lang-fr-inline">
-                                        Interprétation (oral)<br />
-                                        anglais–français–chinois–cantonais
-                                    </span>
-                                    <span class="lang-zh-inline">
-                                        口译服务<br />
-                                        英语–法语–中文–粤语
-                                    </span>
-                                </td>
-                                <td>
-                                    <span class="lang-fr-inline">
-                                        Tarif horaire selon la durée de la mission,<br />
-                                        le type d’intervention et la distance de déplacement.
-                                    </span>
-                                    <span class="lang-zh-inline">
-                                        按小时计费，具体费用取决于服务时长、<br />
-                                        任务类型以及出行距离。
-                                    </span>
-                                </td>
-                            </tr>
+                            <ul class="link-list lang-fr-block">
+                                <li>Création de site web</li>
+                                <li>Projets de données linguistiques</li>
+                            </ul>
 
-                            <tr>
-                                <td>
-                                    <strong>
-                                        <span class="lang-fr-inline">Services linguistiques</span>
-                                        <span class="lang-zh-inline">语言服务</span>
-                                    </strong>
-                                </td>
-                                <td>
-                                    <span class="lang-fr-inline">Création de corpus</span>
-                                    <span class="lang-zh-inline">语料库创建</span>
-                                </td>
-                                <td>
-                                    <span class="lang-fr-inline">
-                                        Tarif selon la complexité technique
-                                        et le volume des données.
-                                    </span>
-                                    <span class="lang-zh-inline">
-                                        价格根据技术复杂度及数据量而定。
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <strong>
-                                        <span class="lang-fr-inline">Services techniques</span>
-                                        <span class="lang-zh-inline">技术服务</span>
-                                    </strong>
-                                </td>
-                                <td>
-                                    <span class="lang-fr-inline">Création de site web</span>
-                                    <span class="lang-zh-inline">网站制作</span>
-                                </td>
-                                <td>
-                                    <span class="lang-fr-inline">
-                                        Tarif selon la durée du projet
-                                        et le niveau technique.
-                                    </span>
-                                    <span class="lang-zh-inline">
-                                        价格根据项目周期及技术难度而定。
-                                    </span>
-                                </td>
-                            </tr>
-                        </table>
+                            <ul class="link-list lang-zh-block">
+                                <li>网站制作</li>
+                                <li>语言数据项目</li>
+                            </ul>
+                        </section>
 
                     </section>
                 </div>
 
                 <!-- RIGHT SIDEBAR -->
                 <div class="col-4 col-12-medium">
+
                     <section>
+                        <h2>
+                            <span class="lang-fr-inline">Domaines</span>
+                            <span class="lang-zh-inline">业务领域</span>
+                        </h2>
+
+                        <div class="lang-fr-block">
+                            <p>
+                                Traduction assermentée, création de sites web,
+                                traduction juridique (contrats d'entreprise, documents juridiques, permis de conduire, documents notariés, etc.)
+, documents officiels,
+                                création de corpus linguistiques, TAL, lexicographie numérique,
+                                données linguistiques et projets multilingues.
+                            </p>
+                        </div>
+
+                        <div class="lang-zh-block">
+                            <p>
+                                法院认证翻译（公司合同，司法文件，驾照，公证书等）、网站制作、法律翻译、官方文件翻译、
+                                语言语料库创建、自然语言处理、数字词典编纂、
+                                语言数据项目与多语种项目。
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="contact">
                         <h2>
                             <span class="lang-fr-inline">Contact</span>
                             <span class="lang-zh-inline">联系方式</span>
@@ -333,7 +264,7 @@
 
                         <h2>
                             <span class="lang-fr-inline">Informations complètes</span>
-                            <span class="lang-zh-inline">完整信息</span>
+                            <span class="lang-zh-inline">更多信息</span>
                         </h2>
 
                         <ul class="link-list">
@@ -357,6 +288,7 @@
                             </li>
                         </ul>
                     </section>
+
                 </div>
 
             </div>
@@ -367,8 +299,8 @@
     <div id="footer-wrapper">
         <div class="container">
             <div id="copyright">
-                <span class="lang-fr-inline">&copy; 2026 CHEN Lian – Traductrice français–chinois–cantonais</span>
-                <span class="lang-zh-inline">&copy; 2026 CHEN Lian – 法语–中文–粤语翻译服务</span>
+                <span class="lang-fr-inline">&copy; 2026 CHEN Lian – Traductrice &amp; Data scientist</span>
+                <span class="lang-zh-inline">&copy; 2026 CHEN Lian – 翻译与数据科学</span>
             </div>
         </div>
     </div>
