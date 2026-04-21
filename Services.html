@@ -1,28 +1,94 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="fr">
 <head>
     <title>Services – CHEN Lian</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+        .language-floating {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 99999;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .language-floating button {
+            margin-left: 6px;
+            padding: 8px 14px;
+            border: 1px solid #ccc;
+            background: #fff;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .language-floating button:hover {
+            background: #f2f2f2;
+        }
+
+        .language-floating button.active-lang {
+            background: #333;
+            color: #fff;
+            border-color: #333;
+        }
+
+        .lang-fr-inline,
+        .lang-zh-inline {
+            display: none;
+        }
+
+        .lang-fr-block,
+        .lang-zh-block {
+            display: none;
+        }
+
+        .email-link {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
 <div id="page-wrapper">
 
+    <!-- 固定悬浮语言按钮 -->
+    <div class="language-floating">
+        <button id="btn-fr" type="button">FR</button>
+        <button id="btn-zh" type="button">中文</button>
+    </div>
+
     <!-- Header -->
     <div id="header-wrapper">
         <div class="container">
             <header id="header">
-                <h1><a href="index.html" id="logo">CHEN Lian – Traductrice</a></h1>
-                <nav id="nav">
-                    <a href="index.html">Accueil</a>
-                    <a href="services.html" class="current-page-item">Services et prix </a>
-                  
-                </nav>
+                <h1>
+                    <a href="index.html" id="logo">
+                        <span class="lang-fr-inline">CHEN Lian – Traductrice</span>
+                        <span class="lang-zh-inline">CHEN Lian – 翻译服务</span>
+                    </a>
+                </h1>
 
-                <!-- Google Translate button -->
-                <div id="google_translate_element" class="translate-box"></div>
+                <nav id="nav">
+                    <a href="index.html">
+                        <span class="lang-fr-inline">Accueil</span>
+                        <span class="lang-zh-inline">首页</span>
+                    </a>
+                    <a href="services.html" class="current-page-item">
+                        <span class="lang-fr-inline">Services et prix</span>
+                        <span class="lang-zh-inline">服务与价格</span>
+                    </a>
+                </nav>
             </header>
         </div>
     </div>
@@ -32,148 +98,265 @@
         <div class="container">
             <div class="row main-row">
 
-              <!-- LEFT COLUMN -->
-<div class="col-8 col-12-medium">
+                <!-- LEFT COLUMN -->
+                <div class="col-8 col-12-medium">
+                    <section>
 
-    <section>
+                        <h2>
+                            <span class="lang-fr-inline">Tarifs indicatifs</span>
+                            <span class="lang-zh-inline">参考价格</span>
+                        </h2>
 
-      <h2>Tarifs indicatifs</h2>
+                        <div class="lang-fr-block tarif-intro">
+                            <p>
+                                Les tarifs varient en fonction du type de document, du volume, du niveau de technicité,
+                                du délai demandé (3 à 5 jours, 7 à 9 jours ou urgence 24 h),
+                                ainsi que de la nature de la prestation (traduction écrite, interprétation, etc.).
+                            </p>
+                        </div>
 
-<p class="tarif-intro">
-Les tarifs varient en fonction du type de document, du volume, du niveau de technicité,
-du délai demandé (3 à 5 jours, 7 à 9 jours ou urgence 24 h),
-ainsi que de la nature de la prestation (traduction écrite, interprétation, etc.).
-</p>
+                        <div class="lang-zh-block tarif-intro">
+                            <p>
+                                价格会根据文件类型、篇幅、
+                                所需时限（3至5天、7至9天或24小时加急），
+                                以及服务性质（笔译、口译等）而有所不同。
+                            </p>
+                        </div>
 
-<div class="tarif-note">
-<p>
-<strong>Délais :</strong><br/>
+                        <div class="tarif-note">
+                            <div class="lang-fr-block">
+                                <p>
+                                    <strong>Délais :</strong><br />
 
-• Documents courts (permis de conduire, acte de naissance, diplômes, etc.) : 3 à 5 jours<br/>
+                                    • Documents courts (permis de conduire, acte de naissance, diplômes, etc.) : 3 à 5 jours<br />
 
-• Documents plus complexes ou volumineux :<br/>
-&nbsp;&nbsp;– Moins de 10 pages (contrats, jugements, dossiers administratifs, etc.) : 7 à 9 jours<br/>
-&nbsp;&nbsp;– Plus de 10 pages : délai variable en fonction du volume<br/>
+                                    • Documents plus complexes ou volumineux :<br />
+                                    &nbsp;&nbsp;– Moins de 10 pages (contrats, jugements, dossiers administratifs, etc.) : 7 à 9 jours<br />
+                                    &nbsp;&nbsp;– Plus de 10 pages : délai variable en fonction du volume<br />
 
-• Urgence : 24 h (tarif majoré)<br/>
+                                    • Urgence : 24 h (tarif majoré)<br />
 
-<em>Les délais commencent à courir à compter de la réception du règlement.</em>
-</p>
-</div>
-        </div>
+                                    <em>Les délais commencent à courir à compter de la réception du règlement.</em>
+                                </p>
+                            </div>
 
-    </br>
+                            <div class="lang-zh-block">
+                                <p>
+                                    <strong>交付时间：</strong><br />
 
-        <h2>Demande de devis :</h2>
-        <p>
-        Merci d’envoyer votre demande (le document à traduire et  les délais souhaités) à :
-        <a href="mailto:lian.chen@orange.fr" class="email-link">
-            lian.chen@orange.fr
-        </a>
-        </p>
+                                    • 短文件（驾照、出生证明、学历证书等）：3至5天<br />
 
-        <table class="tarif-table">
-            <tr>
-                <th>Catégorie</th>
-                <th>Service</th>
-                <th>Remarques tarifaires</th>
-            </tr>
+                                    • 较复杂或篇幅较长的文件：<br />
+                                    &nbsp;&nbsp;– 少于10页（合同、判决书、行政材料等）：7至9天<br />
+                                    &nbsp;&nbsp;– 超过10页：交付时间将根据篇幅另行确定<br />
 
+                                    • 加急服务：24小时（加收费用）<br />
 
+                                    <em>交付时间自收到付款之日起计算。</em>
+                                </p>
+                            </div>
+                        </div>
 
+                        <br />
 
-            <tr>
-                <td rowspan="3"><strong>Services de traduction</strong></td>
-                <td>Traduction anglais–français–chinois–cantonais</td>
-                
-                <td>
-                   Tarif variable selon le volume, le type de document
-        et le délai (24h / 3 jours à partir de la réception du règlement).
-                </td>
-            </tr>
+                        <h2>
+                            <span class="lang-fr-inline">Demande de devis :</span>
+                            <span class="lang-zh-inline">报价咨询：</span>
+                        </h2>
 
-            <tr>
-                <td>
-                    Traductrice assermentée français–chinois–cantonais<br/>
-                    <span class="cn-text">
-                    （法国法院认证翻译 – 法语–汉语–粤语）
-                    </span>
-                </td>
-               
-                <td>
-                   Tarif variable selon le volume, le type de document
-        et le délai (24h / 3 jours à partir de la réception du règlement).
-                </td>
-            </tr>
+                        <div class="lang-fr-block">
+                            <p>
+                                Merci d’envoyer votre demande (le document à traduire et les délais souhaités) à :
+                                <a href="mailto:lian.chen@orange.fr" class="email-link">
+                                    lian.chen@orange.fr
+                                </a>
+                            </p>
+                        </div>
 
+                        <div class="lang-zh-block">
+                            <p>
+                                请将您的报价申请（需翻译的文件及期望完成时间）发送至：
+                                <a href="mailto:lian.chen@orange.fr" class="email-link">
+                                    lian.chen@orange.fr
+                                </a>
+                            </p>
+                        </div>
 
+                        <table class="tarif-table">
+                            <tr>
+                                <th>
+                                    <span class="lang-fr-inline">Catégorie</span>
+                                    <span class="lang-zh-inline">类别</span>
+                                </th>
+                                <th>
+                                    <span class="lang-fr-inline">Service</span>
+                                    <span class="lang-zh-inline">服务</span>
+                                </th>
+                                <th>
+                                    <span class="lang-fr-inline">Remarques tarifaires</span>
+                                    <span class="lang-zh-inline">价格说明</span>
+                                </th>
+                            </tr>
 
+                            <tr>
+                                <td rowspan="3">
+                                    <strong>
+                                        <span class="lang-fr-inline">Services de traduction</span>
+                                        <span class="lang-zh-inline">翻译服务</span>
+                                    </strong>
+                                </td>
+                                <td>
+                                    <span class="lang-fr-inline">Traduction anglais–français–chinois–cantonais</span>
+                                    <span class="lang-zh-inline">英语–法语–中文–粤语笔译</span>
+                                </td>
+                                <td>
+                                    <span class="lang-fr-inline">
+                                        Tarif variable selon le volume, le type de document
+                                        et le délai (24h / 3 jours à partir de la réception du règlement).
+                                    </span>
+                                    <span class="lang-zh-inline">
+                                        价格根据篇幅、文件类型及完成时限而定
+                                        （收到付款后可提供24小时或3天起的服务）。
+                                    </span>
+                                </td>
+                            </tr>
 
+                            <tr>
+                                <td>
+                                    <span class="lang-fr-inline">
+                                        Traductrice assermentée français–chinois–cantonais
+                                    </span>
+                                    <span class="lang-zh-inline">
+                                        法语–中文–粤语法院认证翻译
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="lang-fr-inline">
+                                        Tarif variable selon le volume, le type de document
+                                        et le délai (24h / 3 jours à partir de la réception du règlement).
+                                    </span>
+                                    <span class="lang-zh-inline">
+                                        价格根据篇幅、文件类型及完成时限而定
+                                        （收到付款后可提供24小时或3天起的服务）。
+                                    </span>
+                                </td>
+                            </tr>
 
+                            <tr>
+                                <td>
+                                    <span class="lang-fr-inline">
+                                        Interprétation (oral)<br />
+                                        anglais–français–chinois–cantonais
+                                    </span>
+                                    <span class="lang-zh-inline">
+                                        口译服务<br />
+                                        英语–法语–中文–粤语
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="lang-fr-inline">
+                                        Tarif horaire selon la durée de la mission,<br />
+                                        le type d’intervention et la distance de déplacement.
+                                    </span>
+                                    <span class="lang-zh-inline">
+                                        按小时计费，具体费用取决于服务时长、<br />
+                                        任务类型以及出行距离。
+                                    </span>
+                                </td>
+                            </tr>
 
-            <tr>
-                <td>
-                    Interprétation (oral)<br/>
-                    anglais–français–chinois–cantonais
-                </td>
-                <td>
-                    Tarif horaire selon la durée de la mission,<br/>
-                    le type d’intervention et la distance de déplacement.
-                </td>
-            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="lang-fr-inline">Services linguistiques</span>
+                                        <span class="lang-zh-inline">语言服务</span>
+                                    </strong>
+                                </td>
+                                <td>
+                                    <span class="lang-fr-inline">Création de corpus</span>
+                                    <span class="lang-zh-inline">语料库创建</span>
+                                </td>
+                                <td>
+                                    <span class="lang-fr-inline">
+                                        Tarif selon la complexité technique
+                                        et le volume des données.
+                                    </span>
+                                    <span class="lang-zh-inline">
+                                        价格根据技术复杂度及数据量而定。
+                                    </span>
+                                </td>
+                            </tr>
 
-            <tr>
-                <td><strong>Services linguistiques</strong></td>
-                <td>
-                    Création de corpus<br/>
-                   
-                </td>
-                <td>
-                    Tarif selon la complexité technique
-                    et le volume des données.
-                </td>
-            </tr>
+                            <tr>
+                                <td>
+                                    <strong>
+                                        <span class="lang-fr-inline">Services techniques</span>
+                                        <span class="lang-zh-inline">技术服务</span>
+                                    </strong>
+                                </td>
+                                <td>
+                                    <span class="lang-fr-inline">Création de site web</span>
+                                    <span class="lang-zh-inline">网站制作</span>
+                                </td>
+                                <td>
+                                    <span class="lang-fr-inline">
+                                        Tarif selon la durée du projet
+                                        et le niveau technique.
+                                    </span>
+                                    <span class="lang-zh-inline">
+                                        价格根据项目周期及技术难度而定。
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
 
-            <tr>
-                <td><strong>Services techniques</strong></td>
-                <td>
-                    Création de site web
-                </td>
-                <td>
-                    Tarif selon la durée du projet
-                    et le niveau technique.
-                </td>
-            </tr>
-        </table>
-
-    </section>
-
-</div>
+                    </section>
+                </div>
 
                 <!-- RIGHT SIDEBAR -->
                 <div class="col-4 col-12-medium">
-
-                    
-
-                    <!-- Contact -->
                     <section>
-                        <h2>Contact</h2>
+                        <h2>
+                            <span class="lang-fr-inline">Contact</span>
+                            <span class="lang-zh-inline">联系方式</span>
+                        </h2>
+
                         <ul class="link-list">
-                            <li>Email :        <a href="mailto:lian.chen@orange.fr" style="color: blue;">
-            lian.chen@orange.fr
-        </a>
+                            <li>
+                                <span class="lang-fr-inline">Email :</span>
+                                <span class="lang-zh-inline">邮箱：</span>
+                                <a href="mailto:lian.chen@orange.fr" class="email-link">
+                                    lian.chen@orange.fr
+                                </a>
+                            </li>
+                        </ul>
 
-<br/>
-<br/>
-<br/>
-         <h2>Informations complètes</h2>
-                            <li><a href="https://www.annuaire-traducteur-assermente.fr/fr/3,2,10459/fiche_traducteur_assermente_chinois_mandarin_cantonais_CHEN_Lian_AMIENS.html" target="_blank">Annuaire officiel des traducteurs assermentés</a></li>
+                        <h2>
+                            <span class="lang-fr-inline">Informations complètes</span>
+                            <span class="lang-zh-inline">完整信息</span>
+                        </h2>
 
-                            <li><a href="https://lianchen.fr/" target="_blank">Site académique</a></li>
-                            <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+                        <ul class="link-list">
+                            <li>
+                                <a href="https://www.annuaire-traducteur-assermente.fr/fr/3,2,10459/fiche_traducteur_assermente_chinois_mandarin_cantonais_CHEN_Lian_AMIENS.html" target="_blank">
+                                    <span class="lang-fr-inline">Annuaire officiel des traducteurs assermentés</span>
+                                    <span class="lang-zh-inline">法院认证翻译官方名录</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://lianchen.fr/" target="_blank">
+                                    <span class="lang-fr-inline">Site académique</span>
+                                    <span class="lang-zh-inline">学术网站</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://fr.linkedin.com/in/chen-lian-16311596" target="_blank">
+                                    <span class="https://fr.linkedin.com/in/chen-lian-16311596">LinkedIn</span>
+                                    <span class="https://fr.linkedin.com/in/chen-lian-16311596">领英</span>
+                                </a>
+                            </li>
                         </ul>
                     </section>
-
                 </div>
 
             </div>
@@ -184,7 +367,8 @@ ainsi que de la nature de la prestation (traduction écrite, interprétation, et
     <div id="footer-wrapper">
         <div class="container">
             <div id="copyright">
-                &copy; 2026 CHEN Lian – Traductrice français–chinois–cantonais
+                <span class="lang-fr-inline">&copy; 2026 CHEN Lian – Traductrice français–chinois–cantonais</span>
+                <span class="lang-zh-inline">&copy; 2026 CHEN Lian – 法语–中文–粤语翻译服务</span>
             </div>
         </div>
     </div>
@@ -197,20 +381,46 @@ ainsi que de la nature de la prestation (traduction écrite, interprétation, et
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 
-
-
-<!-- Google Translate script -->
 <script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'fr',
-    includedLanguages: 'fr,en,zh-CN',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
-}
-</script>
+function switchLang(lang) {
+    const frInline = document.querySelectorAll('.lang-fr-inline');
+    const zhInline = document.querySelectorAll('.lang-zh-inline');
+    const frBlock = document.querySelectorAll('.lang-fr-block');
+    const zhBlock = document.querySelectorAll('.lang-zh-block');
 
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    if (lang === 'fr') {
+        frInline.forEach(el => el.style.display = 'inline');
+        zhInline.forEach(el => el.style.display = 'none');
+        frBlock.forEach(el => el.style.display = 'block');
+        zhBlock.forEach(el => el.style.display = 'none');
+        document.documentElement.lang = 'fr';
+
+        document.getElementById('btn-fr').classList.add('active-lang');
+        document.getElementById('btn-zh').classList.remove('active-lang');
+    } else {
+        frInline.forEach(el => el.style.display = 'none');
+        zhInline.forEach(el => el.style.display = 'inline');
+        frBlock.forEach(el => el.style.display = 'none');
+        zhBlock.forEach(el => el.style.display = 'block');
+        document.documentElement.lang = 'zh';
+
+        document.getElementById('btn-zh').classList.add('active-lang');
+        document.getElementById('btn-fr').classList.remove('active-lang');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('btn-fr').addEventListener('click', function () {
+        switchLang('fr');
+    });
+
+    document.getElementById('btn-zh').addEventListener('click', function () {
+        switchLang('zh');
+    });
+
+    switchLang('fr');
+});
+</script>
 
 </body>
 </html>

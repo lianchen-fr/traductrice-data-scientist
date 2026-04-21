@@ -1,33 +1,98 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="fr">
 <head>
     <title>CHEN Lian – Traductrice</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+        /* 固定语言切换按钮：脱离 header，避免被模板覆盖 */
+        .language-floating {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 99999;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .language-floating button {
+            margin-left: 6px;
+            padding: 8px 14px;
+            border: 1px solid #ccc;
+            background: #fff;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .language-floating button:hover {
+            background: #f2f2f2;
+        }
+
+        .language-floating button.active-lang {
+            background: #333;
+            color: #fff;
+            border-color: #333;
+        }
+
+        .lang-fr-inline,
+        .lang-zh-inline {
+            display: none;
+        }
+
+        .lang-fr-block,
+        .lang-zh-block {
+            display: none;
+        }
+
+        .email-link {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
 <div id="page-wrapper">
 
+    <!-- 固定悬浮语言按钮 -->
+    <div class="language-floating">
+        <button id="btn-fr" type="button">FR</button>
+        <button id="btn-zh" type="button">中文</button>
+    </div>
+
     <!-- Header -->
     <div id="header-wrapper">
         <div class="container">
             <header id="header">
-              
-    <h1><a href="index.html" id="logo">CHEN Lian 陈恋 </a></h1>
 
-    <nav id="nav">
-           <a href="index.html">Accueil</a>
-                            <a href="Services.html">Services et prix</a>
-     
-    </nav>
+                <h1>
+                    <a href="index.html" id="logo">
+                        <span class="lang-fr-inline">CHEN Lian</span>
+                        <span class="lang-zh-inline">CHEN Lian 陈恋</span>
+                    </a>
+                </h1>
 
-    <!-- Google Translate button -->
-    <div id="google_translate_element" class="translate-box"></div>
-</header>
+                <nav id="nav">
+                    <a href="index.html">
+                        <span class="lang-fr-inline">Accueil</span>
+                        <span class="lang-zh-inline">首页</span>
+                    </a>
+                    <a href="services.html">
+                        <span class="lang-fr-inline">Services et prix</span>
+                        <span class="lang-zh-inline">服务与价格</span>
+                    </a>
+                </nav>
 
-      
+            </header>
         </div>
     </div>
 
@@ -35,17 +100,21 @@
     <div id="banner-wrapper">
         <div class="container">
             <div id="banner">
-                <h2>CHEN Lian 陈恋 </h2>
-                <span>
-                    
-                     
+                <h1>
+                    <span class="lang-inline lang-fr active">CHEN Lian</span>
+                    <span class="lang-inline lang-zh">陈恋</span>
+                </h1>
 
-                 Traduction assermentée & Data scientist 
-                     <br/>
+                <span class="lang lang-fr active">
+                    Traduction assermentée &amp; Data scientist
+                    <br /><br />
+                    français–chinois–cantonais–anglais
+                </span>
 
-                     <br/>
-
-                 français–chinois–cantonais–anglais<br/>
+                <span class="lang lang-zh">
+                    法院认证翻译 &amp; 数据科学工作者
+                    <br /><br />
+                    法语–中文–粤语–英语
                 </span>
             </div>
         </div>
@@ -58,98 +127,165 @@
 
                 <!-- LEFT COLUMN -->
                 <div class="col-8 col-12-medium">
+                    <section id="services">
 
-                    <!-- Services -->
-                  <!-- Services -->
-<section id="services">
+                        <section id="about">
+                            <h2>
+                                <span class="lang-fr-inline">Profil</span>
+                                <span class="lang-zh-inline">个人简介</span>
+                            </h2>
 
-  <!-- Profil -->
-                    <section id="about">
-                        <h2>Profil</h2>
-                        <p>
-                         Docteure en sciences du langage 语言学博士 et spécialiste du traitement automatique des langues,
-                        je propose des services de traduction et d’ingénierie linguistique
-                        entre le français, le chinois et le cantonais.
-                       
-                        Mes compétences couvrent la traduction générale, assermentée (français-chinois-cantonais),
-                         la création et le traitement de corpus, la création de sites web.
-                        </p>
+                            <div class="lang-fr-block">
+                                <p>
+                                    Docteure en sciences du langage et spécialiste du traitement automatique des langues,
+                                    je propose des services de traduction et d’ingénierie linguistique
+                                    entre le français, le chinois et le cantonais.
+                                </p>
+                                <p>
+                                    Mes compétences couvrent la traduction générale, la traduction assermentée
+                                    (français–chinois–cantonais) pour les contrats d'entreprise, documents juridiques, permis de conduire, documents notariés, etc.
+, la création et le traitement de corpus,
+                                    ainsi que la création de sites web.
+                                </p>
+                            </div>
+
+                            <div class="lang-zh-block">
+                                <p>
+                                    我拥有语言学博士学位，专注于自然语言处理领域，
+                                    提供法语、中文、粤语之间的翻译与语言工程服务。
+                                </p>
+                                <p>
+                                    我的专业能力包括：普通翻译、法院认证翻译 （公司合同，司法文件，驾照，公证书等）
+                                    （法语–中文–粤语）、语料库创建与处理，以及网站制作。
+                                </p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2>
+                                <span class="lang-fr-inline">Services de traduction</span>
+                                <span class="lang-zh-inline">翻译服务</span>
+                            </h2>
+
+                            <ul class="link-list lang-fr-block">
+                                <li><strong>Traduction générale en anglais–français–chinois–cantonais</strong></li>
+                                <li>Traductrice assermentée en français–chinois–cantonais (contrats d'entreprise, documents juridiques, permis de conduire, documents notariés, etc.)
+</li>
+                                <li>Interprétation (oral) en anglais–français–chinois–cantonais</li>
+                            </ul>
+
+                            <ul class="link-list lang-zh-block">
+                                <li><strong>英语–法语–中文–粤语普通翻译</strong></li>
+                                <li>法语–中文–粤语法院认证翻译（公司合同，司法文件，驾照，公证书等）</li>
+                                <li>英语–法语–中文–粤语口译服务</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2>
+                                <span class="lang-fr-inline">Services linguistiques</span>
+                                <span class="lang-zh-inline">语言技术服务</span>
+                            </h2>
+
+                            <ul class="link-list lang-fr-block">
+                                <li>Création de corpus linguistiques</li>
+                                <li>Analyse et traitement de corpus</li>
+                            </ul>
+
+                            <ul class="link-list lang-zh-block">
+                                <li>语言语料库创建</li>
+                                <li>语料分析与处理</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2>
+                                <span class="lang-fr-inline">Services techniques</span>
+                                <span class="lang-zh-inline">技术服务</span>
+                            </h2>
+
+                            <ul class="link-list lang-fr-block">
+                                <li>Création de site web</li>
+                                <li>Projets de données linguistiques</li>
+                            </ul>
+
+                            <ul class="link-list lang-zh-block">
+                                <li>网站制作</li>
+                                <li>语言数据项目</li>
+                            </ul>
+                        </section>
+
                     </section>
-
-    <!-- Translation services -->
-    <section>
-        <h2>Services de traduction</h2>
-        <ul class="link-list">
-            <li><strong>Traduction générale en anglais–français–chinois–cantonais</strong></li>
-            <li>
-                Traductrice assermentée en français–chinois–cantonais  
-                (法国法院认证翻译 – 法语–汉语–粤语)
-            </li>
-            <li>
-                Interprétation (oral) en
-                anglais–français–chinois–cantonais
-            </li>
-        </ul>
-    </section>
-
-    <!-- Linguistic services -->
-    <section>
-        <h2>Services linguistiques</h2>
-        <ul class="link-list">
-            <li>Création de corpus linguistiques</li>
-
-            <li>Analyse et traitement de corpus</li>
-         
-        </ul>
-    </section>
-
-    <!-- Technical services -->
-    <section>
-        <h2>Services techniques</h2>
-        <ul class="link-list">
-            <li>Création de site web</li>
-            <li>Projets de données linguistiques</li>
-          
-        </ul>
-    </section>
-
-</section>
-
-
-                  
                 </div>
 
                 <!-- RIGHT SIDEBAR -->
                 <div class="col-4 col-12-medium">
 
                     <section>
-                        <h2>Domaines</h2>
-                        <p>
-                        Traduction assermentée,  création de sites web,
-                        Traduction juridique, documents officiels,
-                       création de corpus linugistique, TAL, lexicographie numérique,
-                        données linguistiques et projets multilingues.
-                        </p>
+                        <h2>
+                            <span class="lang-fr-inline">Domaines</span>
+                            <span class="lang-zh-inline">业务领域</span>
+                        </h2>
+
+                        <div class="lang-fr-block">
+                            <p>
+                                Traduction assermentée, création de sites web,
+                                traduction juridique (contrats d'entreprise, documents juridiques, permis de conduire, documents notariés, etc.)
+, documents officiels,
+                                création de corpus linguistiques, TAL, lexicographie numérique,
+                                données linguistiques et projets multilingues.
+                            </p>
+                        </div>
+
+                        <div class="lang-zh-block">
+                            <p>
+                                法院认证翻译（公司合同，司法文件，驾照，公证书等）、网站制作、法律翻译、官方文件翻译、
+                                语言语料库创建、自然语言处理、数字词典编纂、
+                                语言数据项目与多语种项目。
+                            </p>
+                        </div>
                     </section>
 
                     <section id="contact">
-                        <h2>Contact</h2>
+                        <h2>
+                            <span class="lang-fr-inline">Contact</span>
+                            <span class="lang-zh-inline">联系方式</span>
+                        </h2>
+
                         <ul class="link-list">
-                      <li>Email :        <a href="mailto:lian.chen@orange.fr" style="color: blue;">
-            lian.chen@orange.fr
+                            <li>
+                                <span class="lang-fr-inline">Email :</span>
+                                <span class="lang-zh-inline">邮箱：</span>
+                                <a href="mailto:lian.chen@orange.fr" class="email-link">
+                                    lian.chen@orange.fr
+                                </a>
+                            </li>
+                        </ul>
 
-        </a>
+                        <h2>
+                            <span class="lang-fr-inline">Informations complètes</span>
+                            <span class="lang-zh-inline">更多信息</span>
+                        </h2>
 
-
-        <br/>
-        <br/>
-        <br/>
-
-         <h2>Informations complètes</h2>
-                            <li><a href="https://www.annuaire-traducteur-assermente.fr/fr/3,2,10459/fiche_traducteur_assermente_chinois_mandarin_cantonais_CHEN_Lian_AMIENS.html" target="_blank">Annuaire officiel des traducteurs assermentés</a></li>
-
-                            <li><a href="https://lianchen.fr/" target="_blank">Site académique</a></li>
-                            <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+                        <ul class="link-list">
+                            <li>
+                                <a href="https://www.annuaire-traducteur-assermente.fr/fr/3,2,10459/fiche_traducteur_assermente_chinois_mandarin_cantonais_CHEN_Lian_AMIENS.html" target="_blank">
+                                    <span class="lang-fr-inline">Annuaire officiel des traducteurs assermentés</span>
+                                    <span class="lang-zh-inline">法院认证翻译官方名录</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://lianchen.fr/" target="_blank">
+                                    <span class="lang-fr-inline">Site académique</span>
+                                    <span class="lang-zh-inline">学术网站</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://fr.linkedin.com/in/chen-lian-16311596" target="_blank">
+                                    <span class="https://fr.linkedin.com/in/chen-lian-16311596">LinkedIn</span>
+                                    <span class="https://fr.linkedin.com/in/chen-lian-16311596">领英</span>
+                                </a>
+                            </li>
                         </ul>
                     </section>
 
@@ -163,7 +299,8 @@
     <div id="footer-wrapper">
         <div class="container">
             <div id="copyright">
-                &copy; 2026 CHEN Lian – Traductrice & Data scientist
+                <span class="lang-fr-inline">&copy; 2026 CHEN Lian – Traductrice &amp; Data scientist</span>
+                <span class="lang-zh-inline">&copy; 2026 CHEN Lian – 翻译与数据科学</span>
             </div>
         </div>
     </div>
@@ -176,23 +313,46 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 
+<script>
+function switchLang(lang) {
+    const frInline = document.querySelectorAll('.lang-fr-inline');
+    const zhInline = document.querySelectorAll('.lang-zh-inline');
+    const frBlock = document.querySelectorAll('.lang-fr-block');
+    const zhBlock = document.querySelectorAll('.lang-zh-block');
 
+    if (lang === 'fr') {
+        frInline.forEach(el => el.style.display = 'inline');
+        zhInline.forEach(el => el.style.display = 'none');
+        frBlock.forEach(el => el.style.display = 'block');
+        zhBlock.forEach(el => el.style.display = 'none');
+        document.documentElement.lang = 'fr';
 
- <!-- 谷歌翻译 -->
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement(
-    {
-      pageLanguage: 'fr',
-      includedLanguages: 'fr,en,zh-CN,zh-TW',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    },
-    'google_translate_element'
-  );
+        document.getElementById('btn-fr').classList.add('active-lang');
+        document.getElementById('btn-zh').classList.remove('active-lang');
+    } else {
+        frInline.forEach(el => el.style.display = 'none');
+        zhInline.forEach(el => el.style.display = 'inline');
+        frBlock.forEach(el => el.style.display = 'none');
+        zhBlock.forEach(el => el.style.display = 'block');
+        document.documentElement.lang = 'zh';
+
+        document.getElementById('btn-zh').classList.add('active-lang');
+        document.getElementById('btn-fr').classList.remove('active-lang');
+    }
 }
-</script>
 
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('btn-fr').addEventListener('click', function () {
+        switchLang('fr');
+    });
+
+    document.getElementById('btn-zh').addEventListener('click', function () {
+        switchLang('zh');
+    });
+
+    switchLang('fr');
+});
+</script>
 
 </body>
 </html>
